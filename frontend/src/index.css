@@ -1,0 +1,100 @@
+/* ── HireVerse Design System ────────────────────────────────── */
+:root {
+  --hv-primary:      #6366f1;
+  --hv-primary-dark: #4f46e5;
+  --hv-green:        #10b981;
+  --hv-green-dark:   #059669;
+  --hv-dark:         #0f172a;
+  --hv-navy:         #1e3a5f;
+  --hv-surface:      #ffffff;
+  --hv-bg:           #f8fafc;
+  --hv-border:       #e8edf5;
+  --hv-border-input: #e2e8f0;
+  --hv-text:         #1e293b;
+  --hv-text-muted:   #64748b;
+  --hv-text-faint:   #94a3b8;
+  --hv-radius:       12px;
+  --hv-radius-sm:    8px;
+  --hv-shadow:       0 1px 6px rgba(0,0,0,0.06);
+  --hv-shadow-md:    0 4px 18px rgba(0,0,0,0.1);
+}
+
+/* Global */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  background: var(--hv-bg);
+  color: var(--hv-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Override Bootstrap form controls globally */
+.form-control, .form-select {
+  border-radius: var(--hv-radius-sm) !important;
+  border: 1.5px solid var(--hv-border-input) !important;
+  padding: 10px 14px !important;
+  color: var(--hv-text) !important;
+  transition: border-color 0.15s, box-shadow 0.15s !important;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--hv-primary) !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12) !important;
+  outline: none !important;
+}
+.form-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Override Bootstrap btn-primary globally */
+.btn-primary {
+  background: linear-gradient(135deg, var(--hv-primary), var(--hv-primary-dark)) !important;
+  border: none !important;
+  border-radius: var(--hv-radius-sm) !important;
+}
+.btn-primary:hover { opacity: 0.92; }
+.btn-outline-primary {
+  color: var(--hv-primary) !important;
+  border-color: var(--hv-primary) !important;
+  border-radius: var(--hv-radius-sm) !important;
+}
+.btn-outline-primary:hover {
+  background: var(--hv-primary) !important;
+  color: #fff !important;
+}
+
+/* Cards */
+.card {
+  border-radius: var(--hv-radius) !important;
+  border: 1px solid var(--hv-border) !important;
+  box-shadow: var(--hv-shadow) !important;
+}
+
+/* Smooth page transitions */
+.container { padding-top: 24px; }
+
+/* Spinner colour match */
+.spinner-border.text-primary { color: var(--hv-primary) !important; }
+
+/* Pagination */
+.page-link { color: var(--hv-primary); }
+.page-item.active .page-link {
+  background: var(--hv-primary);
+  border-color: var(--hv-primary);
+}
+
+/* Table head */
+.table thead th {
+  background: #f1f5f9;
+  color: var(--hv-text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  border-bottom: 1px solid var(--hv-border);
+}
+
+/* Alert overrides */
+.alert { border-radius: var(--hv-radius-sm) !important; }
