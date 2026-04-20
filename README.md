@@ -103,7 +103,9 @@ That's it — Spring Boot will auto-create all tables on first run.
 
 ### 2. Backend Configuration
 
-Create the file `backend/src/main/resources/application-dev.properties` with your local credentials:
+1. Locate the template file: `backend/src/main/resources/application-dev.properties.example`
+2. **Copy** it to a new file named `application-dev.properties` in the same directory.
+3. Open `application-dev.properties` and update it with your local MySQL password and a secret key.
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/job_portal_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
